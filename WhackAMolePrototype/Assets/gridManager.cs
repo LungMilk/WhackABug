@@ -52,7 +52,7 @@ public class gridManager : MonoBehaviour
         int randomIndex = Random.Range(0, gridObjects.Count);
         //do we want it to be able to select the same space?
         chosenObject = gridObjects[randomIndex].GetComponent<GridObject>();
-        print(chosenObject.name);
+        //print(chosenObject.name);
         chosenObject.SetObjectStatus(true);
         //now I want some way on how toreset its status;
     }
@@ -66,11 +66,64 @@ public class gridManager : MonoBehaviour
             currentTime = timeInterval;
             GetGridPosition();
         }
-        if (Input.anyKey)
+
+        int inputIndex = 0;
+        if (Input.GetKeyDown("[0]"))
         {
-            gridObjects[ReadKeypadInput() > gridObjects.Count ? 0:ReadKeypadInput() -1].GetComponent<GridObject>().SetObjectStatus(false);
-            print(ReadKeypadInput());
+            //print(0);
+            inputIndex = 0;
         }
+        if (Input.GetKeyDown("[1]"))
+        {
+            //print(1);
+            inputIndex = 1;
+        }
+        if (Input.GetKeyDown("[2]"))
+        {
+            //print(2);
+            inputIndex = 2;
+        }
+        if (Input.GetKeyDown("[3]"))
+        {
+            //print(3);
+            inputIndex = 3;
+        }
+        if (Input.GetKeyDown("[4]"))
+        {//
+            //print(4);
+            inputIndex = 4;
+        }
+        if (Input.GetKeyDown("[5]"))
+        {
+            //print(5);
+            inputIndex = 5;
+        }
+        if (Input.GetKeyDown("[6]"))
+        {
+            //print(6);
+            inputIndex = 6;
+        }
+        if (Input.GetKeyDown("[7]"))
+        {
+            //print(7);
+            inputIndex = 7;
+        }
+        if (Input.GetKeyDown("[8]"))
+        {
+            //print(8);
+            inputIndex = 8;
+        }
+        if (Input.GetKeyDown("[9]"))
+        {
+            //print(9);
+            inputIndex = 9;
+        }
+        if (Input.anyKeyDown)
+        {
+            print(inputIndex.ToString());
+            gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false) ;
+        }
+          //print(ReadKeypadInput());
     }
 
     int ReadKeypadInput()

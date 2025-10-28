@@ -354,6 +354,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &218248046
@@ -455,6 +456,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &262587987
@@ -724,6 +726,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &321086936
@@ -1814,6 +1817,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &841381013
@@ -1915,6 +1919,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &956224229
@@ -2405,8 +2410,12 @@ MonoBehaviour:
   - {fileID: 1096596471}
   prefabGridObject: {fileID: 3701826454705483694, guid: e4738a85bbf9778418faae2b3e289415, type: 3}
   maxNumOfActiveButtons: 0
+  bugs: []
   chosenObject: {fileID: 0}
   timeInterval: 1
+  bugLibrary:
+  - {fileID: 2585515350843791933, guid: bcd724a61d96db74aaff74018ca0b321, type: 3}
+  - {fileID: 2585515350843791933, guid: bcd724a61d96db74aaff74018ca0b321, type: 3}
 --- !u!4 &1100858775
 Transform:
   m_ObjectHideFlags: 0
@@ -2416,8 +2425,8 @@ Transform:
   m_GameObject: {fileID: 1100858773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2, y: -1.91, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2111555220}
@@ -2742,6 +2751,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1211306992
@@ -3348,6 +3358,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1599985852
@@ -4455,6 +4466,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1967565371
@@ -4776,6 +4788,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2043840097

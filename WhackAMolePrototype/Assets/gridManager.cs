@@ -7,11 +7,17 @@ public class gridManager : MonoBehaviour
     public List<Transform> gridPositions;
     public GameObject prefabGridObject;
     public float maxNumOfActiveButtons;
+    public List<Bug> bugs;
+
     //public Color axtiveButtonColor;
     public GridObject chosenObject;
 
     public float timeInterval = 1f;
     private float currentTime;
+
+    public List<GameObject> bugLibrary;
+
+    private List<int> availableIndices = new List<int>();
 
     [ContextMenu("SetGridObjects")]
     void SetGridPositions()
@@ -57,14 +63,57 @@ public class gridManager : MonoBehaviour
         //now I want some way on how toreset its status;
     }
 
+    //i need to somehow have a bug exist on this grid space adn when teh button is pressed the bug is destroyed.
+    void SpawnBug()
+    {
+        //I need to randomly check all of my grid positions and then check if that random ones grid object is not occupied
+
+        //functionality for getting a random index
+        //functionality for checking if this random index is occupied 
+        //functionality of finding another index and checking again
+        int index = GetRandomUnusedIndex();
+        Bug freshBug = Instantiate(bugLibrary[0], gridObjects[index].transform).GetComponent<Bug>();
+        bugs.Add(freshBug);
+        gridObjects[index].GetComponent<GridObject>().SetObjectStatus(true);
+        gridObjects[index].GetComponent<GridObject>().bug = freshBug;
+    }
+    int GetRandomUnusedIndex()
+    {
+        if (availableIndices.Count == 0)
+        {
+            InitializeAvailableIndicies();
+        }
+
+        int randomIndex = Random.Range(0, availableIndices.Count);
+        int actualIndex = availableIndices[randomIndex];
+
+        availableIndices.RemoveAt(randomIndex);
+        return actualIndex;
+    }
+
+    void InitializeAvailableIndicies()
+    {
+        availableIndices = new List<int>();
+        for (int i = 0; i < gridObjects.Count; i++)
+        {
+            //now what I am missing is if it is available being added back into the index
+            if (!gridObjects[i].GetComponent<GridObject>().occupied)
+            {
+                availableIndices.Add(i);
+            }
+        }
+    }
+
     private void Update()
     {
+        InitializeAvailableIndicies();
         //all that needs to happen is I want a timer that every few seconds changes the active button.
         currentTime -= Time.deltaTime;
         if (currentTime < 0)
         {
             currentTime = timeInterval;
-            GetGridPosition();
+            SpawnBug();
+            //GetGridPosition();
         }
 
         int inputIndex = 0;
@@ -120,10 +169,12 @@ public class gridManager : MonoBehaviour
         }
         if (Input.anyKeyDown)
         {
-            print(inputIndex.ToString());
+            //print(inputIndex.ToString());
             gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false) ;
+            gridObjects[inputIndex - 1].GetComponent<GridObject>().bug.Squashed();
+            bugs.RemoveAt(inputIndex - 1);
         }
-          //print(ReadKeypadInput());
+        //print(ReadKeypadInput());
     }
 
     int ReadKeypadInput()

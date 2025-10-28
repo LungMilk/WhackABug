@@ -8,8 +8,11 @@ public class GridObject : MonoBehaviour
     public Transform spawnPosition;
     private SpriteRenderer spr;
     public bool occupied;
+    public Bug bug;
+
     public Color defaultColor = Color.white;
     public Color occupiedColor = Color.red;
+
     private void Awake()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();

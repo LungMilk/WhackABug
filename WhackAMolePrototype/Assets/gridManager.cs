@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.Events;
+using System;
 public class gridManager : MonoBehaviour
 {
     public List<GameObject> gridObjects;
@@ -18,6 +20,8 @@ public class gridManager : MonoBehaviour
     public List<GameObject> bugLibrary;
 
     private List<int> availableIndices = new List<int>();
+
+    public static Action<bool> comboAction;
 
     [ContextMenu("SetGridObjects")]
     void SetGridPositions()
@@ -55,7 +59,7 @@ public class gridManager : MonoBehaviour
             chosenObject.SetObjectStatus(false);
         }
 
-        int randomIndex = Random.Range(0, gridObjects.Count);
+        int randomIndex = UnityEngine.Random.Range(0, gridObjects.Count);
         //do we want it to be able to select the same space?
         chosenObject = gridObjects[randomIndex].GetComponent<GridObject>();
         //print(chosenObject.name);
@@ -84,7 +88,7 @@ public class gridManager : MonoBehaviour
             InitializeAvailableIndicies();
         }
 
-        int randomIndex = Random.Range(0, availableIndices.Count);
+        int randomIndex = UnityEngine.Random.Range(0, availableIndices.Count);
         int actualIndex = availableIndices[randomIndex];
 
         availableIndices.RemoveAt(randomIndex);
@@ -169,12 +173,22 @@ public class gridManager : MonoBehaviour
         }
         if (Input.anyKeyDown)
         {
-            //print(inputIndex.ToString());
-            gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false) ;
+            //print(inputIndex.ToString())
+            print(DoesButtonContainBug(inputIndex));
+            comboAction.Invoke(DoesButtonContainBug(inputIndex));
+            
+            gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
             gridObjects[inputIndex - 1].GetComponent<GridObject>().bug.Squashed();
             bugs.RemoveAt(inputIndex - 1);
         }
         //print(ReadKeypadInput());
+    }
+
+    public bool DoesButtonContainBug(int index)
+    {
+        GridObject pressedObject = gridObjects[index - 1].GetComponent<GridObject>();
+        if (pressedObject.occupied) {return true;}
+        else {return false;}
     }
 
     int ReadKeypadInput()

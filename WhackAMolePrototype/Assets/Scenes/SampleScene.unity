@@ -2596,9 +2596,7 @@ MonoBehaviour:
   bugs: []
   chosenObject: {fileID: 0}
   timeInterval: 1
-  bugLibrary:
-  - {fileID: 2585515350843791933, guid: bcd724a61d96db74aaff74018ca0b321, type: 3}
-  - {fileID: 2585515350843791933, guid: bcd724a61d96db74aaff74018ca0b321, type: 3}
+  bugLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
 --- !u!4 &1100858775
 Transform:
   m_ObjectHideFlags: 0

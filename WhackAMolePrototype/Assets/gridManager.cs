@@ -17,7 +17,7 @@ public class gridManager : MonoBehaviour
     public float timeInterval = 1f;
     private float currentTime;
 
-    public List<GameObject> bugLibrary;
+    public ItemCollection bugLibrary;
 
     private List<int> availableIndices = new List<int>();
 
@@ -76,7 +76,7 @@ public class gridManager : MonoBehaviour
         //functionality for checking if this random index is occupied 
         //functionality of finding another index and checking again
         int index = GetRandomUnusedIndex();
-        Bug freshBug = Instantiate(bugLibrary[0], gridObjects[index].transform).GetComponent<Bug>();
+        Bug freshBug = Instantiate(bugLibrary.SelectRandomItem(), gridObjects[index].transform).GetComponent<Bug>();
         bugs.Add(freshBug);
         gridObjects[index].GetComponent<GridObject>().SetObjectStatus(true);
         gridObjects[index].GetComponent<GridObject>().bug = freshBug;

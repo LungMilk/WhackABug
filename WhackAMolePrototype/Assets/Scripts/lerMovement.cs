@@ -21,5 +21,10 @@ public class LerpMovement : MonoBehaviour
         float percentageComplete = elapsedTime / desiredDuration;
         //rotate to face the center
         transform.position = Vector3.Lerp(startPosition, endPosition, percentageComplete);
+
+        if (transform.position == target.position)
+        {
+            LossManager.instance.End();
+        }
     }
 }

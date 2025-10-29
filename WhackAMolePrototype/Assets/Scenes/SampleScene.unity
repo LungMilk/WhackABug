@@ -1162,6 +1162,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &466420240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1283,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,6 +1738,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &618455569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2667,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &941075566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2962,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &997549181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3147,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010855093}
   m_CullTransparentMesh: 1
+--- !u!1 &1044832850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044832852}
+  - component: {fileID: 1044832851}
+  - component: {fileID: 1044832853}
+  m_Layer: 0
+  m_Name: Lossmanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1044832851
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044832850}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!4 &1044832852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044832850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044832853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044832850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12549926e682444782cf43bfba08536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachedEnd: 0
+  LossName: Bug
 --- !u!1 &1057323082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3378,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &1096596470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,11 +3666,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 600290288}
   lowerSpawnLimit: {fileID: 997549182}
+  spawnRateMax: 0
+  spawnRateMin: 0
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
   enemyPrefab: {fileID: 0}
-  enemyTarget: {fileID: 2136679042}
+  enemyTarget: {fileID: 1044832852}
 --- !u!4 &1103934443
 Transform:
   m_ObjectHideFlags: 0
@@ -4011,6 +4204,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &1341181862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,11 +4614,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1784756648}
   lowerSpawnLimit: {fileID: 2057825283}
+  spawnRateMax: 0
+  spawnRateMin: 0
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
   enemyPrefab: {fileID: 0}
-  enemyTarget: {fileID: 2136679042}
+  enemyTarget: {fileID: 1044832852}
 --- !u!4 &1582325724
 Transform:
   m_ObjectHideFlags: 0
@@ -4559,6 +4772,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &1612191423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,11 +5124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 2132619105}
   lowerSpawnLimit: {fileID: 1400126161}
+  spawnRateMax: 0
+  spawnRateMin: 0
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
   enemyPrefab: {fileID: 0}
-  enemyTarget: {fileID: 2136679042}
+  enemyTarget: {fileID: 1044832852}
 --- !u!4 &1809033905
 Transform:
   m_ObjectHideFlags: 0
@@ -5018,6 +5251,24 @@ MonoBehaviour:
   objectsInSpace: []
   defaultColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.015686275}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
+  killLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxSize: {x: 10, y: 10}
 --- !u!1 &1842849530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5439,11 +5690,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1842849531}
   lowerSpawnLimit: {fileID: 676698127}
+  spawnRateMax: 0
+  spawnRateMin: 0
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
   enemyPrefab: {fileID: 0}
-  enemyTarget: {fileID: 2136679042}
+  enemyTarget: {fileID: 1044832852}
 --- !u!4 &1957148625
 Transform:
   m_ObjectHideFlags: 0
@@ -5921,7 +6174,7 @@ Transform:
   m_GameObject: {fileID: 2136679041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6505089, y: 0.3099104, z: -0.047507666}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5942,3 +6195,4 @@ SceneRoots:
   - {fileID: 2136679042}
   - {fileID: 1057323084}
   - {fileID: 618455571}
+  - {fileID: 1044832852}

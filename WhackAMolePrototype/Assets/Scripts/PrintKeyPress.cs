@@ -19,17 +19,14 @@ public class PrintKeyPress : MonoBehaviour
     {
         foreach (KeyCode keyCode in keyCodes)
         {
-            if (InputDeclaration(keyCode))
-            {
-                break;
-            }
+            InputDeclaration(keyCode);
         }
     }
     public bool InputDeclaration(KeyCode code)
     {
         if (Input.GetKeyDown(code))
         {
-            //print($"{ButtonCalled(code)} at index of: {ReturnIndexOfKeyPressed(code)}");
+            print($"{ButtonCalled(code)} at index of: {ReturnIndexOfKeyPressed(code)}");
             //OnKeyPressed.Invoke(ReturnIndexOfKeyPressed(code));
             inputAction.Invoke(ReturnIndexOfKeyPressed(code));
             ButtonCalled(code);

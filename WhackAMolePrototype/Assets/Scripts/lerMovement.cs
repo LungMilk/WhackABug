@@ -11,7 +11,7 @@ public class LerpMovement : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        endPosition = new Vector3(0, 0, 0);
+        endPosition = target.position;
     }
 
     // Update is called once per frame

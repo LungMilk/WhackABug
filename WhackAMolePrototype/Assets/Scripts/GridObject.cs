@@ -59,9 +59,12 @@ public class GridObject : MonoBehaviour
         tempCreatureList = objectsInSpace;
         for ( int i = 0;  i < objectsInSpace.Count; i++ )
         {
+            float scoreBounty = tempCreatureList[i].GetComponent<Bug>().scoreWorth;
+            ScoreManager.Instance.IncreaseTotalScore(scoreBounty);
             Destroy(tempCreatureList[i]);
             //objectsInSpace.RemoveAt(i);
         }
+
         GameObject objects = new GameObject();
         objectsInSpace.RemoveAll(go => go == objects);
     }

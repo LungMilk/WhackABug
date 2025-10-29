@@ -6,6 +6,7 @@ public class WomboComboTracker : MonoBehaviour
     public TextMeshProUGUI comboTracker;
     private float comboValue;
     public float comboMax;
+    public float comboMin;
 
     private void Awake()
     {
@@ -24,16 +25,18 @@ public class WomboComboTracker : MonoBehaviour
 
     public void ResetComboTracker()
     {
-        print("reset Combo tracker");
-        comboValue = 0;
+        //print("reset Combo tracker");
+        comboValue = comboMin;
+        ScoreManager.Instance.currentMultiplier = comboMin;
     }
     public void IncreaseComboTracker()
     {
-        print("Increase Combo tracker");
+        //print("Increase Combo tracker");
         comboValue++;
         if (comboValue > comboMax)
         {
             comboValue = comboMax;
         }
+        ScoreManager.Instance.currentMultiplier = comboValue;
     }
 }

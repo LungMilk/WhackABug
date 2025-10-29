@@ -19,7 +19,7 @@ public class LerpMovement : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
         float percentageComplete = elapsedTime / desiredDuration;
-
+        //rotate to face the center
         transform.position = Vector3.Lerp(startPosition, endPosition, percentageComplete);
     }
 }

@@ -119,7 +119,6 @@ public class gridManager : MonoBehaviour
             //SpawnBug();
             //GetGridPosition();
         }
-
         int inputIndex = 0;
         if (Input.GetKeyDown("[0]"))
         {
@@ -175,11 +174,17 @@ public class gridManager : MonoBehaviour
         {
             //print(inputIndex.ToString())
             //print(DoesButtonContainBug(inputIndex));
+            GridObject inputGridObject = gridObjects[inputIndex - 1].GetComponent<GridObject>();
+
             comboAction.Invoke(DoesButtonContainBug(inputIndex));
-            
-            gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
-            gridObjects[inputIndex - 1].GetComponent<GridObject>().bug.Squashed();
-            bugs.RemoveAt(inputIndex - 1);
+            if (DoesButtonContainBug(inputIndex))
+            {
+                inputGridObject.ClearObjectsInSpace();
+            }
+            //gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
+            //inputGridObject.SetObjectStatus(true);
+            //inputGridObject.bug.Squashed();
+            //bugs.RemoveAt(inputIndex - 1);
         }
         //print(ReadKeypadInput());
     }

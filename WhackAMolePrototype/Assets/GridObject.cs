@@ -56,6 +56,7 @@ public class GridObject : MonoBehaviour
     {
         foreach (GameObject obj in objectsInSpace)
         {
+            Destroy(obj);
             objectsInSpace.Remove(obj);
         }
 
@@ -64,6 +65,12 @@ public class GridObject : MonoBehaviour
     public void ClearNumberOfObjectsInSpace(int numToEliminate)
     {
         //raah
+        for (int i = 0; i < numToEliminate; i++)
+        {
+            Destroy(objectsInSpace[i]);
+            //does the index shift? after everything was done
+            objectsInSpace.RemoveAt(i);
+        }
     }
     //private void OnMouseDown()
     //{

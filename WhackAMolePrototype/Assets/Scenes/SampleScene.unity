@@ -2915,6 +2915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 600290288}
   lowerSpawnLimit: {fileID: 997549182}
+  spawnRateMax: 1
+  spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -4104,7 +4106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576159727}
   - component: {fileID: 1576159726}
-  - component: {fileID: 1576159725}
+  - component: {fileID: 1576159728}
   m_Layer: 0
   m_Name: LossManager
   m_TagString: Untagged
@@ -4112,22 +4114,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1576159725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576159724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476c3d058e1b76344be662db08070849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 64
-  tag: Bug
 --- !u!61 &1576159726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4189,6 +4175,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576159728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576159724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12549926e682444782cf43bfba08536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachedEnd: 0
+  LossName: 
 --- !u!1 &1582325722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,6 +4220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1784756648}
   lowerSpawnLimit: {fileID: 2057825283}
+  spawnRateMax: 1
+  spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -4886,6 +4888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 2132619105}
   lowerSpawnLimit: {fileID: 1400126161}
+  spawnRateMax: 1
+  spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -5044,6 +5048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1842849531}
   lowerSpawnLimit: {fileID: 676698127}
+  spawnRateMax: 1
+  spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1

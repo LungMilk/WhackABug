@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class ItemCollection : ScriptableObject
 {
     public List<BugSO> Items;
-    public Object SelectRandomItem()
+    public GameObject SelectRandomItem()
     {
         int index = Random.Range(0, Items.Count);
         return Items[index].objectPrefab;

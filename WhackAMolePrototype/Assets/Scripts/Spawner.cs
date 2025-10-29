@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -58,7 +59,8 @@ public class Spawner : MonoBehaviour
 
         if (groupSpawner)
         {
-            Instantiate(itemLibrary.SelectRandomItem(), spawnPos, Quaternion.identity);
+            GameObject entity = Instantiate(itemLibrary.SelectRandomItem(), spawnPos, Quaternion.identity);
+            entity.GetComponent<LerpMovement>().target = enemyTarget;
         }
         else
         {

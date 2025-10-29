@@ -138,13 +138,10 @@ public class gridManager : MonoBehaviour
         GridObject inputGridObject = gridObjects[inputIndex].GetComponent<GridObject>();
         //print(inputIndex);
 
-        comboAction.Invoke(DoesButtonContainBug(inputIndex));
-        if (DoesButtonContainBug(inputIndex))
-        {
-            inputGridObject.ClearObjectsInSpace();
-        }
+        //comboAction.Invoke(DoesButtonContainBug(inputIndex));
+        inputGridObject.ClearObjectsInSpace();
         ////gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
-        inputGridObject.SetObjectStatus(!inputGridObject.occupied);
+        //inputGridObject.SetObjectStatus(!inputGridObject.occupied);
         //inputGridObject.bug.Squashed();
         //bugs.RemoveAt(inputIndex - 1);
     }

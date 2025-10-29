@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using NUnit.Framework;
+using System.Collections.Generic;
 public class GridObject : MonoBehaviour
 {
     public int position;
@@ -9,6 +11,8 @@ public class GridObject : MonoBehaviour
     private SpriteRenderer spr;
     public bool occupied;
     public Bug bug;
+
+    public List<GameObject> objectsInSpace;
 
     public Color defaultColor = Color.white;
     public Color occupiedColor = Color.red;
@@ -33,8 +37,36 @@ public class GridObject : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SetObjectStatus(true);
+        print("adding " +  collision.gameObject.name);
+        objectsInSpace.Add(collision.gameObject);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
     {
         SetObjectStatus(false);
+        print("removing " + collision.gameObject.name);
+        if (objectsInSpace.Find(go => go == collision.gameObject)) {
+            objectsInSpace.Remove(collision.gameObject);
+        }
     }
+
+    public void ClearObjectsInSpace()
+    {
+        foreach (GameObject obj in objectsInSpace)
+        {
+            objectsInSpace.Remove(obj);
+        }
+
+    }
+
+    public void ClearNumberOfObjectsInSpace(int numToEliminate)
+    {
+        //raah
+    }
+    //private void OnMouseDown()
+    //{
+    //    SetObjectStatus(false);
+    //}
 }

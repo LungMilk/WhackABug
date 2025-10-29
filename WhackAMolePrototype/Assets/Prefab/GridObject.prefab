@@ -276,6 +276,7 @@ MonoBehaviour:
   label: {fileID: 0}
   spawnPosition: {fileID: 0}
   occupied: 0
+  bug: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   occupiedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &8550780766395560629
@@ -308,7 +309,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

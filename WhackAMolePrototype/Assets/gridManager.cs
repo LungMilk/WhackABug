@@ -116,7 +116,7 @@ public class gridManager : MonoBehaviour
         if (currentTime < 0)
         {
             currentTime = timeInterval;
-            SpawnBug();
+            //SpawnBug();
             //GetGridPosition();
         }
 
@@ -174,7 +174,7 @@ public class gridManager : MonoBehaviour
         if (Input.anyKeyDown)
         {
             //print(inputIndex.ToString())
-            print(DoesButtonContainBug(inputIndex));
+            //print(DoesButtonContainBug(inputIndex));
             comboAction.Invoke(DoesButtonContainBug(inputIndex));
             
             gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);

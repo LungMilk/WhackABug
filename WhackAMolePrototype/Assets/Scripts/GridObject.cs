@@ -26,6 +26,7 @@ public class GridObject : MonoBehaviour
         label = GetComponentInChildren<TextMeshProUGUI>();
         spr = GetComponentInChildren<SpriteRenderer>();
         label.text = name;
+        SetObjectStatus(false);
     }
 
     public void SetObjectStatus(bool Occupied)

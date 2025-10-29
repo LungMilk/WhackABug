@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LossManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class LossManager : MonoBehaviour
     public void End()
     {
         print("end");
+        SceneManager.LoadSceneAsync("GameOver");
+        SceneManager.UnloadSceneAsync("SampleScene");
+        SceneManager.UnloadSceneAsync("StartScreenTest");
+        Debug.Log("GameOver!!");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -5,6 +5,9 @@ using UnityEngine.Events;
 using System;
 public class gridManager : MonoBehaviour
 {
+    //public PrintKeyPress inputManager;
+    //gridmanager needs to read the input sof the input manager I can access it by making a delegate action tha tis the button called then if that is called assign it with whatever.
+
     public List<GameObject> gridObjects;
     public List<Transform> gridPositions;
     public GameObject prefabGridObject;
@@ -22,6 +25,12 @@ public class gridManager : MonoBehaviour
     private List<int> availableIndices = new List<int>();
 
     public static Action<bool> comboAction;
+
+    private void Start()
+    {
+        //PrintKeyPress.OnKeyPressed.AddListener(InputFunctionality);
+        PrintKeyPress.inputAction += InputFunctionality;
+    }
 
     [ContextMenu("SetGridObjects")]
     void SetGridPositions()
@@ -119,74 +128,30 @@ public class gridManager : MonoBehaviour
             //SpawnBug();
             //GetGridPosition();
         }
+        
+    }
 
-        int inputIndex = 0;
-        if (Input.GetKeyDown("[0]"))
+    public void InputFunctionality(int inputIndex)
+    {
+        //print(inputIndex.ToString())
+        //print(DoesButtonContainBug(inputIndex));
+        GridObject inputGridObject = gridObjects[inputIndex].GetComponent<GridObject>();
+        //print(inputIndex);
+
+        //comboAction.Invoke(DoesButtonContainBug(inputIndex));
+        if (DoesButtonContainBug(inputIndex))
         {
-            //print(0);
-            inputIndex = 0;
+            inputGridObject.ClearObjectsInSpace();
         }
-        if (Input.GetKeyDown("[1]"))
-        {
-            //print(1);
-            inputIndex = 1;
-        }
-        if (Input.GetKeyDown("[2]"))
-        {
-            //print(2);
-            inputIndex = 2;
-        }
-        if (Input.GetKeyDown("[3]"))
-        {
-            //print(3);
-            inputIndex = 3;
-        }
-        if (Input.GetKeyDown("[4]"))
-        {//
-            //print(4);
-            inputIndex = 4;
-        }
-        if (Input.GetKeyDown("[5]"))
-        {
-            //print(5);
-            inputIndex = 5;
-        }
-        if (Input.GetKeyDown("[6]"))
-        {
-            //print(6);
-            inputIndex = 6;
-        }
-        if (Input.GetKeyDown("[7]"))
-        {
-            //print(7);
-            inputIndex = 7;
-        }
-        if (Input.GetKeyDown("[8]"))
-        {
-            //print(8);
-            inputIndex = 8;
-        }
-        if (Input.GetKeyDown("[9]"))
-        {
-            //print(9);
-            inputIndex = 9;
-        }
-        if (Input.anyKeyDown)
-        {
-            //print(inputIndex.ToString())
-            //print(DoesButtonContainBug(inputIndex));
-            comboAction.Invoke(DoesButtonContainBug(inputIndex));
-            
-            gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
-            gridObjects[inputIndex - 1].GetComponent<GridObject>().bug.Squashed();
-            bugs.RemoveAt(inputIndex - 1);
-        }
-        //print(ReadKeypadInput());
+        ////gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
+        inputGridObject.SetObjectStatus(true);
+        //inputGridObject.bug.Squashed();
+        //bugs.RemoveAt(inputIndex - 1);
     }
 
     public bool DoesButtonContainBug(int index)
     {
-        GridObject pressedObject = gridObjects[index - 1].GetComponent<GridObject>();
+        GridObject pressedObject = gridObjects[index].GetComponent<GridObject>();
         if (pressedObject.occupied) {return true;}
         else {return false;}
     }

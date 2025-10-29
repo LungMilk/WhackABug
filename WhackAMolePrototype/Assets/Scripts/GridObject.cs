@@ -40,13 +40,13 @@ public class GridObject : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SetObjectStatus(true);
-        print("adding " +  collision.gameObject.name);
+        //print("adding " +  collision.gameObject.name);
         objectsInSpace.Add(collision.gameObject);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         SetObjectStatus(false);
-        print("removing " + collision.gameObject.name);
+        //print("removing " + collision.gameObject.name);
         if (objectsInSpace.Find(go => go == collision.gameObject)) {
             objectsInSpace.Remove(collision.gameObject);
         }
@@ -54,16 +54,27 @@ public class GridObject : MonoBehaviour
 
     public void ClearObjectsInSpace()
     {
-        foreach (GameObject obj in objectsInSpace)
+        //our issue
+        List<GameObject> tempCreatureList = new List<GameObject>();
+        tempCreatureList = objectsInSpace;
+        for ( int i = 0;  i < objectsInSpace.Count; i++ )
         {
-            objectsInSpace.Remove(obj);
+            Destroy(tempCreatureList[i]);
+            //objectsInSpace.RemoveAt(i);
         }
-
+        GameObject objects = new GameObject();
+        objectsInSpace.RemoveAll(go => go == objects);
     }
 
     public void ClearNumberOfObjectsInSpace(int numToEliminate)
     {
         //raah
+        for (int i = 0; i < numToEliminate; i++)
+        {
+            Destroy(objectsInSpace[i]);
+            //does the index shift? after everything was done
+            objectsInSpace.RemoveAt(i);
+        }
     }
     //private void OnMouseDown()
     //{

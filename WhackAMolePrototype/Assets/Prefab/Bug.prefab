@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -2023990788162837731}
   - component: {fileID: 7250405901538569089}
   - component: {fileID: 6014809295716533402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bug
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937449061345899144}
   - component: {fileID: 4128325392821997643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b45178177fe5dc4697ea00024c7693c, type: 3}
-  m_Name: LadyBug
+  m_Name: Locust
   m_EditorClassIdentifier: 
   displayName: ladybug
   displayImage: {fileID: 0}
-  objectPrefab: {fileID: 2585515350843791933, guid: 37e6138026b877541974ad881984f4bf, type: 3}
+  objectPrefab: {fileID: 2585515350843791933, guid: 6974900e7e4d69e4cbfb73bf2ff212a4, type: 3}

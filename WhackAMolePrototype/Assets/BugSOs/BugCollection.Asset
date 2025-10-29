@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: BugCollection
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 55bec2cf021b99741aa14b34db6272dc, type: 2}
+  - {fileID: 11400000, guid: 774c1d3a84a956244858fb3d5089a331, type: 2}
   - {fileID: 11400000, guid: 19a136588634ebb4ca95eeb60bc2eb79, type: 2}
+  - {fileID: 11400000, guid: 7f4415a1f29d946419804afd2c9f14a9, type: 2}
+  - {fileID: 11400000, guid: bf78eb18450e76649a9bca7b626f6e69, type: 2}

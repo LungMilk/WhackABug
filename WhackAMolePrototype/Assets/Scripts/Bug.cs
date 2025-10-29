@@ -7,7 +7,7 @@ public class Bug : MonoBehaviour
     public float scoreWorth;
     private void Awake()
     {
-        spriteRenderer.color = bugColor;   
+        //spriteRenderer.color = bugColor;   
     }
 
     public void Squashed()

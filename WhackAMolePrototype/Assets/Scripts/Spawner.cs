@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
     public Transform upperSpawnLimit;
     public Transform lowerSpawnLimit;
 
+    public float spawnRateMax;
+    public float spawnRateMin;
     public float spawnRate;
     private float spawnDelay;
     private Vector3 spawnPos;
@@ -23,6 +25,7 @@ public class Spawner : MonoBehaviour
 
     protected virtual void spawnConditionals()
     {
+        
         spawnDelay += Time.deltaTime; // Increase spawn delay based on time, not frame count
 
         // Calculate the delay between spawns based on spawnRate (number of objects per second)
@@ -33,6 +36,7 @@ public class Spawner : MonoBehaviour
         {
             spawnObjects();
             spawnDelay = 0f; // Reset the spawn delay after spawning
+            spawnRate = Random.Range(spawnRateMin, spawnRateMax);
         }
     }
 

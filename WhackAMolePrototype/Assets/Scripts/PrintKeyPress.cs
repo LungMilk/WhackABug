@@ -26,7 +26,7 @@ public class PrintKeyPress : MonoBehaviour
     {
         if (Input.GetKeyDown(code))
         {
-            //print($"{ButtonCalled(code)} at index of: {ReturnIndexOfKeyPressed(code)}");
+            print($"{ButtonCalled(code)} at index of: {ReturnIndexOfKeyPressed(code)}");
             //OnKeyPressed.Invoke(ReturnIndexOfKeyPressed(code));
             inputAction.Invoke(ReturnIndexOfKeyPressed(code));
             ButtonCalled(code);

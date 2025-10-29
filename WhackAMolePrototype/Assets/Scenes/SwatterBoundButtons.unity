@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035248323ae149640a031beb311c48db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCodes: 730000006100000077000000670000006600000064000000440100004301000020000000
+  keyCodes: 730000006100000077000000670000006600000064000000200000004301000044010000
 --- !u!4 &1057323084
 Transform:
   m_ObjectHideFlags: 0
@@ -2960,7 +2960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 600290288}
   lowerSpawnLimit: {fileID: 997549182}
-  spawnRateMax: 1
+  spawnRateMax: 0.5
   spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
@@ -4197,7 +4197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1576159726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4304,7 +4304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1784756648}
   lowerSpawnLimit: {fileID: 2057825283}
-  spawnRateMax: 1
+  spawnRateMax: 0.5
   spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
@@ -4910,7 +4910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 2132619105}
   lowerSpawnLimit: {fileID: 1400126161}
-  spawnRateMax: 1
+  spawnRateMax: 0.5
   spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
@@ -5132,7 +5132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1842849531}
   lowerSpawnLimit: {fileID: 676698127}
-  spawnRateMax: 1
+  spawnRateMax: 0.5
   spawnRateMin: 0.1
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}

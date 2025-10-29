@@ -24,7 +24,7 @@ public class LerpMovement : MonoBehaviour
 
         if (transform.position == target.position)
         {
-            LossManager.instance.End();
+            //LossManager.instance.End();
         }
     }
 }

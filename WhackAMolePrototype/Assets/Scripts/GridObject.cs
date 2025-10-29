@@ -79,7 +79,7 @@ public class GridObject : MonoBehaviour
                 Bug bugToDelete = hit.GetComponent<Bug>();
                 float scoreBounty = bugToDelete.scoreWorth;
                 ScoreManager.Instance.IncreaseTotalScore(scoreBounty);
-                print(hit.gameObject.name);
+                //print(hit.gameObject.name);
                 //objectsInSpace.Add(hit.gameObject.transform.position);
                 hit.gameObject.GetComponent<Bug>().Squashed();
             }

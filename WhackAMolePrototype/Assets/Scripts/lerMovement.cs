@@ -48,8 +48,6 @@ public class LerpMovement : MonoBehaviour
         float degrees = radians * Mathf.Rad2Deg;
 
         //transform.rotation = Quaternion.Euler(0, 0, degrees + offset);
-        
-        
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         transform.up = target.position - transform.position;
     }

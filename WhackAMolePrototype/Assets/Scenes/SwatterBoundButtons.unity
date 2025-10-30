@@ -3769,8 +3769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 600290288}
   lowerSpawnLimit: {fileID: 997549182}
-  spawnRateMax: 6
-  spawnRateMin: 0.5
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -4494,8 +4492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1784756648}
   lowerSpawnLimit: {fileID: 2057825283}
-  spawnRateMax: 6
-  spawnRateMin: 0.7
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -4818,8 +4814,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 2132619105}
   lowerSpawnLimit: {fileID: 1400126161}
-  spawnRateMax: 6
-  spawnRateMin: 0.7
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -5022,8 +5016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upperSpawnLimit: {fileID: 1842849531}
   lowerSpawnLimit: {fileID: 676698127}
-  spawnRateMax: 6
-  spawnRateMin: 0.7
   spawnRate: 0.3
   itemLibrary: {fileID: 11400000, guid: d2a569cd3b3c0a749b57fcffc6d06485, type: 2}
   groupSpawner: 1
@@ -5793,6 +5785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136679042}
+  - component: {fileID: 2136679043}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -5815,6 +5808,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2136679043
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136679041}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 3716311464210985186, guid: bf2717432d0dc7641bbf561617ac5402, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.34, y: 0.27}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

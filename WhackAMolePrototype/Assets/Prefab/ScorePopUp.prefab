@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 877878622347655563}
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   stringText: 
-  target: {fileID: 0}
-  desiredDuration: 3
+  desiredDuration: 1
+  elapsedTime: 0
 --- !u!1 &5125225901344993501
 GameObject:
   m_ObjectHideFlags: 0

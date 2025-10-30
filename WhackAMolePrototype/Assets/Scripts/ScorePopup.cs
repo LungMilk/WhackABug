@@ -21,11 +21,10 @@ public class ScorePopup : MonoBehaviour
     void Update()
     {
         Destroy(gameObject,desiredDuration);
-       
     }
 
     public void SetStringText(string text)
     {
-        scoreText.text += $"+{text}";
+        scoreText.text = $"+{text}";
     }
 }

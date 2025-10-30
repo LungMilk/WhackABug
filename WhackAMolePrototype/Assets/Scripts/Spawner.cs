@@ -6,18 +6,16 @@ public class Spawner : MonoBehaviour
     public Transform upperSpawnLimit;
     public Transform lowerSpawnLimit;
 
-    public float spawnRateMax;
-    public float spawnRateMin;
+    //public float spawnRateMax;
+    //public float spawnRateMin;
     public float spawnRate;
     private float spawnDelay;
     private Vector3 spawnPos;
 
     public ItemCollection itemLibrary;
-
-
     public bool groupSpawner;
     public GameObject enemyPrefab;
-    public Transform enemyTarget;
+    //public Transform enemyTarget;
     private void Update()
     {
         spawnConditionals();
@@ -36,7 +34,7 @@ public class Spawner : MonoBehaviour
         {
             spawnObjects();
             spawnDelay = 0f; // Reset the spawn delay after spawning
-            spawnRate = Random.Range(spawnRateMin, spawnRateMax);
+            //spawnRate = Random.Range(spawnRateMin, spawnRateMax);
         }
     }
 
@@ -64,12 +62,12 @@ public class Spawner : MonoBehaviour
         if (groupSpawner)
         {
             GameObject entity = Instantiate(itemLibrary.SelectRandomItem(), spawnPos, Quaternion.identity);
-            entity.GetComponent<LerpMovement>().target = enemyTarget;
+            //entity.GetComponent<LerpMovement>().target = enemyTarget;
         }
         else
         {
             GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-            enemy.GetComponent<LerpMovement>().target = enemyTarget;
+            //enemy.GetComponent<LerpMovement>().target = enemyTarget;
         }
     }
 

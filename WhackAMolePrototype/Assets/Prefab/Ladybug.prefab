@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2585515350843791933}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.044954285, y: 0.042937204, z: 0.06429048}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  desiredDuration: 3
+  speed: 5
+  scanRadius: 100
+  targetTag: Goal
 --- !u!50 &6014809295716533402
 Rigidbody2D:
   serializedVersion: 5
@@ -153,13 +155,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6936903435680097035}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0006750524, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: -0.06429048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4469505330858915125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.077}
 --- !u!212 &4128325392821997643
 SpriteRenderer:
   m_ObjectHideFlags: 0

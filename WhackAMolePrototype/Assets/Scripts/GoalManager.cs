@@ -7,7 +7,7 @@ public class GoalManager : MonoBehaviour
     public List<GameObject> goalList;
     public float numberOfGoals;
     public int deathThreshold;
-    private int lossCondition;
+    [SerializeField] private int lossCondition = 4;
     private void Start()
     {
         numberOfGoals = goalList.Count;
@@ -32,6 +32,7 @@ public class GoalManager : MonoBehaviour
 
     private void End()
     {
-
+        print("GAME OVER");
+        LossManager.instance.End();
     }
 }

@@ -27,10 +27,11 @@ public class ScoreManager : MonoBehaviour
     }
     public void UpdateText()
     {
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText.text = $"Score: {totalScore.ToString()} ";
     }
     public void IncreaseTotalScore(float Increase)
     {
         totalScore += Increase * currentMultiplier;
+        totalScoreText.text = "Score: " + totalScore.ToString();
     }
 }

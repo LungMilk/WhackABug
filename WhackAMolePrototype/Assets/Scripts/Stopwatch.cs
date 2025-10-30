@@ -9,13 +9,13 @@ public class Stopwatch : MonoBehaviour
     void Start()
     {
         currentTime = 0;
-        timerText.text = currentTime.ToString("F2");
+        timerText.text = "Time: " + currentTime.ToString("F2");
     }
 
     // Update is called once per frame
     void Update()
     {
         currentTime += Time.deltaTime;
-        timerText.text = currentTime.ToString("F2");
+        timerText.text = $"Time: {currentTime.ToString("F2")}";
     }
 }

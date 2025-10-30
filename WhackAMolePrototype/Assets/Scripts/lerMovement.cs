@@ -36,10 +36,10 @@ public class LerpMovement : MonoBehaviour
         ////rotate to face the center
         //transform.position = Vector3.Lerp(startPosition, endPosition, percentageComplete);
 
-        if (transform.position == target.position)
-        {
-            //LossManager.instance.End();
-        }
+        //if (target != null &&  transform.position == target.position)
+        //{
+        //    //LossManager.instance.End();
+        //}
 
         float xDiff = target.transform.position.x - transform.position.x;
         float yDiff = target.transform.position.y - transform.position.y;

@@ -30,12 +30,13 @@ public class gridManager : MonoBehaviour
     {
         //PrintKeyPress.OnKeyPressed.AddListener(InputFunctionality);
         PrintKeyPress.inputAction += InputFunctionality;
+        SetGridPositions();
     }
 
     [ContextMenu("SetGridObjects")]
     void SetGridPositions()
     {
-        //ClearGridObjects();
+        ClearGridObjects();
 
         foreach (Transform transform in gridPositions)
         {
@@ -49,7 +50,6 @@ public class gridManager : MonoBehaviour
             chosenObject.name = (i +1).ToString();
         }
     }
-    [ContextMenu("ClearGridObjects")]
     void ClearGridObjects()
     {
         for (int i = 0; i < gridObjects.Count; i++)
@@ -60,19 +60,19 @@ public class gridManager : MonoBehaviour
         }
         gridObjects.Clear();
     }
-    [ContextMenu("GetRandomPosition")]
+    //[ContextMenu("GetRandomPosition")]
     void GetGridPosition()
     {
-        if (chosenObject != null)
-        {
-            chosenObject.SetObjectStatus(false);
-        }
+        //if (chosenObject != null)
+        //{
+        //    chosenObject.SetObjectStatus(false);
+        //}
 
         int randomIndex = UnityEngine.Random.Range(0, gridObjects.Count);
         //do we want it to be able to select the same space?
         chosenObject = gridObjects[randomIndex].GetComponent<GridObject>();
         //print(chosenObject.name);
-        chosenObject.SetObjectStatus(true);
+        //chosenObject.SetObjectStatus(true);
         //now I want some way on how toreset its status;
     }
 
@@ -87,7 +87,7 @@ public class gridManager : MonoBehaviour
         int index = GetRandomUnusedIndex();
         Bug freshBug = Instantiate(bugLibrary.SelectRandomItem(), gridObjects[index].transform).GetComponent<Bug>();
         bugs.Add(freshBug);
-        gridObjects[index].GetComponent<GridObject>().SetObjectStatus(true);
+        //gridObjects[index].GetComponent<GridObject>().SetObjectStatus(true);
         gridObjects[index].GetComponent<GridObject>().bug = freshBug;
     }
     int GetRandomUnusedIndex()
@@ -140,10 +140,13 @@ public class gridManager : MonoBehaviour
 
         //comboAction.Invoke(DoesButtonContainBug(inputIndex));
         inputGridObject.ClearObjectsInSpace();
+        //inputGridObject.StartCoroutine(inputGridObject.ChangeColors());
         ////gridObjects[inputIndex - 1 < 0 || inputIndex - 1 > gridObjects.Count ? 0 : inputIndex - 1].GetComponent<GridObject>().SetObjectStatus(false);
         //inputGridObject.SetObjectStatus(!inputGridObject.occupied);
         //inputGridObject.bug.Squashed();
         //bugs.RemoveAt(inputIndex - 1);
+        inputGridObject.SetObjectStatus();
+        inputGridObject.Invoke("SetObjectStatus", inputGridObject.feedbackColorLength);
     }
 
     public bool DoesButtonContainBug(int index)

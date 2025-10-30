@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 2
   scanRadius: 100
   targetTag: Goal
 --- !u!50 &6014809295716533402

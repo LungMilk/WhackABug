@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Collections;
 public class GridObject : MonoBehaviour
 {
     public int position;
@@ -21,18 +22,34 @@ public class GridObject : MonoBehaviour
     public ContactFilter2D contactFilter;
     public Vector2 boxSize = new Vector2(10,10);
 
+    public float feedbackColorLength;
+
     private void Awake()
     {
-        label = GetComponentInChildren<TextMeshProUGUI>();
+        //label = GetComponentInChildren<TextMeshProUGUI>();
         spr = GetComponentInChildren<SpriteRenderer>();
-        label.text = name;
-        SetObjectStatus(false);
+        //label.text = name;
+        spr.color = defaultColor;   
     }
 
-    public void SetObjectStatus(bool Occupied)
+    public IEnumerator ChangeColors()
     {
-        occupied = Occupied;
-        if (Occupied) 
+        occupied = !occupied;
+        if (occupied)
+        {
+            spr.color = occupiedColor;
+        }
+        else
+        {
+            spr.color = defaultColor;
+            StopAllCoroutines();
+        }
+        yield return new WaitForSeconds(feedbackColorLength);
+    }
+    public void SetObjectStatus()
+    {
+        occupied = !occupied;
+        if (occupied) 
         {
             spr.color = occupiedColor;
         }else

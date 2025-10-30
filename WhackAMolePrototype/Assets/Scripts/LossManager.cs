@@ -24,12 +24,4 @@ public class LossManager : MonoBehaviour
         SceneManager.UnloadSceneAsync("StartScreenTest");
         Debug.Log("GameOver!!");
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       if(collision.gameObject.tag == tag)
-        {
-            print(LossName);
-        }
-    }
 }

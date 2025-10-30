@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  desiredDuration: 10
+  desiredDuration: 3
 --- !u!50 &6014809295716533402
 Rigidbody2D:
   serializedVersion: 5

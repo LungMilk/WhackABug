@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public ItemCollection itemLibrary;
     public bool groupSpawner;
     public GameObject enemyPrefab;
-    public Transform enemyTarget;
+    //public Transform enemyTarget;
     private void Update()
     {
         spawnConditionals();
@@ -62,12 +62,12 @@ public class Spawner : MonoBehaviour
         if (groupSpawner)
         {
             GameObject entity = Instantiate(itemLibrary.SelectRandomItem(), spawnPos, Quaternion.identity);
-            entity.GetComponent<LerpMovement>().target = enemyTarget;
+            //entity.GetComponent<LerpMovement>().target = enemyTarget;
         }
         else
         {
             GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-            enemy.GetComponent<LerpMovement>().target = enemyTarget;
+            //enemy.GetComponent<LerpMovement>().target = enemyTarget;
         }
     }
 

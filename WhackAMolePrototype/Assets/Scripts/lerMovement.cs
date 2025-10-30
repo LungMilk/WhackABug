@@ -24,7 +24,7 @@ public class LerpMovement : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        endPosition = target.position;
+        //endPosition = target.position;
     }
 
     // Update is called once per frame
@@ -54,14 +54,24 @@ public class LerpMovement : MonoBehaviour
     void ScanForObjects()
     {
         // Get all colliders within the scanRadius around this object's position
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, scanRadius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, scanRadius);
 
+        float closestDistance = 100;
         foreach (var hitCollider in hitColliders)
         {
             // Check if the object has the target tag
-            if (hitCollider.CompareTag(targetTag) && target.transform ==null)
+            //we are returnning the first
+            if (hitCollider.CompareTag(targetTag))
             {
-                target = hitCollider.gameObject.transform;
+                Transform foundTarget = hitCollider.gameObject.transform;
+                //print(target.name);
+                Vector2 difference = transform.position - foundTarget.position;
+                float distance = difference.magnitude;
+                if (closestDistance > distance)
+                {
+                    closestDistance = distance;
+                    target = foundTarget;
+                }
                 // Perform actions on the found object
             }
         }

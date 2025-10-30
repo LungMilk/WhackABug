@@ -2371,6 +2371,7 @@ GameObject:
   - component: {fileID: 809968763}
   - component: {fileID: 809968760}
   - component: {fileID: 809968764}
+  - component: {fileID: 809968765}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2449,35 +2450,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74ba3d2a02070d47a64d59a1d41cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scalingOverTime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  scalingValue: 0
-  minuteMilestones:
-  - 1
-  - 2
-  - 3
+  initialValue: 1
+  growthRate: 1.1
+--- !u!114 &809968765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809968759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3c2b953381cf846b34fc4322cfcc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 1809033904}
+  - {fileID: 1957148624}
+  - {fileID: 1582325723}
+  - {fileID: 1103934442}
+  rateIncreaseObject: {fileID: 809968764}
 --- !u!1 &884030883
 GameObject:
   m_ObjectHideFlags: 0

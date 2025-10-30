@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  desiredDuration: 12
-  offset: -180
+  speed: 5
+  scanRadius: 100
+  targetTag: Goal
 --- !u!50 &6014809295716533402
 Rigidbody2D:
   serializedVersion: 5

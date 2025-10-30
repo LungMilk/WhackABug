@@ -19,9 +19,11 @@ public class LossManager : MonoBehaviour
     public void End()
     {
         print("end");
-        SceneManager.LoadSceneAsync("GameOver");
-        SceneManager.UnloadSceneAsync("SampleScene");
-        SceneManager.UnloadSceneAsync("StartScreenTest");
+        //SceneManager.LoadSceneAsync("GameOver");
+        //SceneManager.UnloadSceneAsync("SampleScene");
+        //SceneManager.UnloadSceneAsync("StartScreenTest");
+        // Application.Quit();
+        Time.timeScale = 0f;
         Debug.Log("GameOver!!");
     }
 }

@@ -6,7 +6,7 @@ public class GameOverScript : MonoBehaviour
     private void Start()
     {
         AsyncOperation asyncUnload =
-        SceneManager.UnloadSceneAsync("SampleScene");
+        SceneManager.UnloadSceneAsync("SwatterBoundButtons");
         SceneManager.UnloadSceneAsync("StartScreenTest");
 
     }
@@ -14,7 +14,7 @@ public class GameOverScript : MonoBehaviour
     {
         if (Input.GetKeyDown("a"))
         {
-            SceneManager.LoadSceneAsync("SampleScene");
+            SceneManager.LoadSceneAsync("SwatterBoundButtons");
             SceneManager.UnloadSceneAsync("GameOver");
             Debug.Log("Restart!!");
         }

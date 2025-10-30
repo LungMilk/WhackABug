@@ -13,7 +13,7 @@ public class Bug : MonoBehaviour
 
     public void Squashed()
     {
-        Instantiate(scoreEffect,gameObject.transform.position,Quaternion.identity);
+        if (scoreEffect != null) { Instantiate(scoreEffect, gameObject.transform.position, Quaternion.identity); }
         Destroy(gameObject);
     }
 }

@@ -41,11 +41,11 @@ public class LerpMovement : MonoBehaviour
         //    //LossManager.instance.End();
         //}
 
-        float xDiff = target.transform.position.x - transform.position.x;
-        float yDiff = target.transform.position.y - transform.position.y;
+        //float xDiff = target.transform.position.x - transform.position.x;
+        //float yDiff = target.transform.position.y - transform.position.y;
 
-        float radians = Mathf.Atan2(yDiff, xDiff);
-        float degrees = radians * Mathf.Rad2Deg;
+        //float radians = Mathf.Atan2(yDiff, xDiff);
+        //float degrees = radians * Mathf.Rad2Deg;
 
         //transform.rotation = Quaternion.Euler(0, 0, degrees + offset);
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);

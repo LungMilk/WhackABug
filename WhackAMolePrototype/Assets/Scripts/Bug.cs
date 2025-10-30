@@ -15,8 +15,7 @@ public class Bug : MonoBehaviour
     {
         if (scoreEffect != null) 
         {
-            GameObject newScoreEffect = Instantiate(scoreEffect, gameObject.transform.position, Quaternion.identity); 
-            newScoreEffect.GetComponent<ScorePopup>().SetStringText(scoreWorth.ToString());
+            Instantiate(scoreEffect, gameObject.transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }

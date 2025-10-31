@@ -14,13 +14,19 @@ public class ScorePopup : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SetStringText(stringText);
+        scoreText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        //SetStringText(stringText);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,desiredDuration);
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime > desiredDuration)
+        {
+            Destroy(gameObject);
+        }
+        //Destroy(gameObject,desiredDuration);
     }
 
     public void SetStringText(string text)

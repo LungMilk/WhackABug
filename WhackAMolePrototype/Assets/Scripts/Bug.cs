@@ -15,7 +15,9 @@ public class Bug : MonoBehaviour
     {
         if (scoreEffect != null) 
         {
-            Instantiate(scoreEffect, gameObject.transform.position, Quaternion.identity);
+            GameObject spawnedBug = Instantiate(scoreEffect, gameObject.transform.position, Quaternion.identity);
+            ScorePopup scoreEffectSpawned = spawnedBug.GetComponent<ScorePopup>();
+            scoreEffectSpawned.SetStringText(scoreWorth.ToString());
         }
         Destroy(gameObject);
     }

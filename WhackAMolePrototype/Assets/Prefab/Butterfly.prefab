@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4128325392821997643}
   bugColor: {r: 1, g: 0.8691486, b: 0, a: 1}
-  scoreWorth: 10
+  scoreWorth: 15
   scoreEffect: {fileID: 816348621239184594, guid: 2e8469bb230fb9044ac0ddda3349c691, type: 3}
 --- !u!58 &-2023990788162837731
 CircleCollider2D:

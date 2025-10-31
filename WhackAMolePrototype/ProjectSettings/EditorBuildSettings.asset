@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StartScreenTest.unity
     guid: 67b42580deac7604cbfd0c023d890cc5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SwatterBoundButtons.unity
     guid: 51531f5ed7c89904781bf0a45ad94a72
   - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: d01390f6feb2be64382308f1533d279a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KeypadVersion.unity
     guid: 3ce9a54f11041d34ca6a319578c17541
   m_configObjects:
